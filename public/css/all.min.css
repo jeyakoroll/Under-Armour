@@ -19,7 +19,7 @@ body {
 }
 
 body {
-  font-family: 'OpenSansRegular';
+  font-family: 'MyriadProRegular';
   line-height: 1.6;
 }
 
@@ -84,38 +84,143 @@ p {
 }
 
 .empty {
-  height: 60px;
+  height: 855px;
 }
 
 .footer {
+  background: url("../img/back-footer.png") no-repeat center top/cover;
   position: relative;
-  margin-top: -60px;
-  min-height: 60px;
-  background-color: rgba(0, 0, 0, 0.5);
+  margin-top: -855px;
+  min-height: 855px;
   font-size: 14px;
   color: #101010;
 }
 
-.footer .box:before,
-.footer .box:after {
+.footer__top .box:before,
+.footer__top .box:after {
   content: "";
   display: table;
 }
 
-.footer .box:after {
+.footer__top .box:after {
   clear: both;
 }
 
-.footer__politics {
-  font-size: 16px;
-  color: #fff;
-  margin-top: 30%;
-  margin: 0 auto;
+.footer__logo {
+  padding-top: 190px;
+  padding-left: 140px;
+  width: 282px;
+  height: 213px;
+  float: left;
 }
 
-.footer__copy {
+.footer__descr {
+  float: right;
+  color: #fff;
+  text-align: center;
+  padding-top: 150px;
+}
+
+.footer__title {
+  font-size: 72px;
+  font-family: 'LatoBold';
+}
+
+.footer__text {
+  font-size: 48px;
+  font-family: 'LatoBold';
+}
+
+.footer__price {
+  position: relative;
+  width: 100%;
+  height: 75px;
+}
+
+.footer__price-old {
+  font-size: 30px;
+  position: absolute;
+  left: 25%;
+  top: 20%;
+}
+
+.footer__price-old_line {
+  width: 100%;
+  height: 3px;
+  background-color: #ff0000;
+  position: absolute;
+  -webkit-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+  left: -8%;
+  top: 45%;
+}
+
+.footer__price-new {
+  font-size: 48px;
+  font-family: 'MyriadProBold';
+  color: #ff0000;
+  position: absolute;
+  right: 26%;
+}
+
+.footer__button {
+  text-align: center;
+  margin: 0 auto;
+  height: 62px;
+  width: 355px;
+  margin-top: 105px;
+}
+
+.footer__button-item {
+  font-family: 'MyriadProBold';
+  font-size: 35px;
+  background: transparent;
+  border: 2px solid #fff;
+  cursor: pointer;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 6px;
+}
+
+.footer__bottom {
+  height: 60px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+}
+
+.footer__bottom:before,
+.footer__bottom:after {
+  content: "";
+  display: table;
+}
+
+.footer__bottom:after {
+  clear: both;
+}
+
+.footer__bottom .box {
+  position: relative;
+  height: 25px;
+  width: 100%;
+  margin-top: 18px;
+}
+
+.footer__bottom-politics {
   font-size: 16px;
   color: #fff;
-  margin-top: 30%;
-  float: right;
+  position: absolute;
+  left: 40.3%;
+  width: 260px;
+  text-decoration: none;
+}
+
+.footer__bottom-copy {
+  font-size: 16px;
+  color: #fff;
+  right: 50px;
+  position: absolute;
 }
