@@ -232,18 +232,273 @@ p {
 	width: 100%;
 }
 
-.box {
-	width: 1200px;
-	margin: 0 auto;
+// header area
+.header {
+	min-height: 780px;
+	background: url('../img/back-head.png') no-repeat center top/cover;
+	@include laptop {
+		min-height: 620px;
+	}
+	@include tablets {
+		min-height: 900px;
+	}
+	@include phones {
+		min-height: 0;
+    height: auto;
+    padding-bottom: 40px;
+    background: url(../img/back-mobile.png) no-repeat center top/cover;
+	}
+	& .footer__descr {
+		padding-top: 55px;
+		@include tablets {
+			float: none;
+			display: block;
+			margin: 75px auto 0;
+		}
+		@include phones {
+			padding-top: 0;
+			margin-top: 45px;
+		}
+	}
+	& .footer__logo {
+		padding-top: 90px;
+		@include desktop {
+			padding-left: 10px;
+		}
+		@include tablets {
+			float: none;
+			display: block;
+			margin: 0 auto;
+			height: 213px;
+			width: 282px;
+			padding-top: 60px;
+			padding-left: 0;
+		}
+		@include phones {
+			padding-top: 15px;
+			width: 272px;
+			height: 203px;
+		}
+	}
+	& .footer__title, .footer__text {
+		@include phones {
+			font-size: 32px;
+		}
+	}
+	& .footer__brand {
+		@include phones {
+			width: 280px;
+		}
+	}
+	& .footer__price-new {
+		@include tablets {
+			right: 15%;
+		}
+		@include main(510px) {
+			right: 10%;
+		}
+		@include phones {
+			font-size: 30px;
+			position: relative;
+			display: inline-block;
+			left: 0;
+			top: 0;
+			margin-left: 40px;
+		}
+	}
+	& .footer__price-old {
+		@include tablets {
+			left: 20%;
+		}
+		@include main(510px) {
+			left: 10%;
+		}
+		@include phones {
+			font-size: 22px;
+			position: relative;
+			display: inline-block;
+			left: 0;
+			top: 0;
+			margin-left: 5px;
+		}
+	}
+	& .footer__button {
+		margin-top: 80px;
+		@include phones {
+			margin-top: 0;
+			width: 232px;
+			height: 40px;
+		}
+	}
+	& .footer__button-item {
+		@include phones {
+			font-size: 24px;
+		}
+	}
 }
 
-// header area
+// about area
+.about {
+	min-height: 1130px;
+  background: url(../img/back-advantuges.png) no-repeat center top/cover;
+}
+
+.about__title {
+	font-size: 48px;
+	@include jenya(comfort);
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+.about__top {
+	@include clearfix;
+	position: relative;
+	margin-bottom: 60px;
+}
+
+.about__brand {
+	width: 588px;
+	height: 94px;
+	float: left;
+	position: relative;
+	margin-top: 30px;
+}
+
+.about__brand-item {
+	@include absolute-center;
+	max-width: 99.9%;
+	max-height: 99.9%;
+}
+
+.about__text {
+	position: relative;
+	float: right;
+	width: 45%;
+	font-size: 24px;
+	@include jenya(mabold);
+}
+
+.about__bottom {
+	position: relative;
+}
+
+.about__bottom-title {
+	font-size: 36px;
+	@include jenya(comfort);
+	text-align: center; 
+	margin-bottom: 35px;
+}
+
+.about__bottom-content {
+	position: relative;
+	@include clearfix;
+	min-height: 420px;
+}
+
+.about__bottom-item {
+	position: relative;
+	width: 25%;
+	float: left;
+}
+
+.about__bottom-pic {
+	width: 200px;
+	height: 200px;
+	position: relative;
+	margin: 0	auto;
+}
+
+.about__bottom-pic_item {
+	@include absolute-center;
+	max-width: 99.9%;	
+	max-height: 99.9%;	
+}
+
+.about__bottom-text {
+	font-size: 18px;
+	width: 72%;
+	margin: 0 auto;
+	margin-top: 40px;
+}
+
+// property area
+.property {
+	margin-top: -140px;
+	position: relative;
+	background: transparent;
+	.row {
+		min-height: 1025px;
+		background-color: #e5f2fa;
+		border-radius: 15px;
+		box-shadow: 0px -2px 20px #ccc;
+	}
+}
+
+.property__title {
+	font-size: 48px;
+	@include jenya(comfort);
+	text-align: center;
+}
+
+.property__top {
+	@include clearfix;
+}
+
+.property__top-left {
+	float: left;
+}
+
+.property__top-left_pic {
+	@include absolute-center;
+	max-width: 99.9%;
+	max-height: 99.9%;
+}
+
+.property__top-right {
+	float: left;
+}
+
+.property__top-right_pic {
+	@include absolute-center;
+	max-width: 99.9%;
+	max-height: 99.9%;
+}
+
+.property__bottom {
+	@include clearfix;
+}
+
+.property__bottom-left {
+	float: left;
+}
+
+.property__bottom-left_pic {
+	@include absolute-center;
+	max-width: 99.9%;
+	max-height: 99.9%;
+}
+
+.property__bottom-right {
+	float: left;
+}
+
+.property__bottom-right_pic {
+	@include absolute-center;
+	max-width: 99.9%;
+	max-height: 99.9%;
+}
 
 
 
 
 .empty {
 	height: 855px;
+	@include tablets {
+		height: 900px;
+	}
+	@include phones {
+		height: 700px;
+	}
 }
 // section footer
 .footer {
@@ -253,14 +508,15 @@ p {
 	min-height: 855px;
 	font-size: 14px;
 	color: #101010;
-	.box {
-		
+	@include tablets {
+		min-height: 900px;
+		margin-top: -900px;
+		background: url('../img/back-footer.png') no-repeat 35% top/cover;
 	}
-}
-
-.footer__top {
-	& .box {
-		@include clearfix
+	@include phones {
+		min-height: 700px;
+		margin-top: -700px;
+		background: url('../img/back-footer.png') no-repeat 38% top/cover;
 	}
 }
 
@@ -269,15 +525,41 @@ p {
 	padding-left: 140px;
 	width: 282px;
 	height: 213px;
+	position: relative;
 	float: left;
+	@include desktop {
+		padding-left: 10px;
+	}
+	@include laptop {
+		width: 240px;
+		height: 180px;
+		padding-left: 0;
+	}
+	@include tablets {
+		float: none;
+		display: block;
+		margin: 0 auto;
+		height: 213px;
+		width: 282px;
+		padding-top: 60px;
+		padding-left: 0;
+	}
+	@include phones {
+		padding-top: 20px;
+		width: 272px;
+		height: 203px;
+	}
 }
 
 .footer__logo-link {
-
+	width: 100%;
+	height: 100%;
 }
 
 .footer__logo-pic {
-
+	position: absolute;
+	max-width: 99.9%;
+	max-height: 99.9%;
 }
 
 .footer__descr {
@@ -285,24 +567,64 @@ p {
 	color: #fff;
 	text-align: center;
 	padding-top: 150px;
+	@include desktop {
+		// margin-right: -20px;
+	}
+	@include tablets {
+		float: none;
+		display: block;
+		margin: 75px auto 0;
+		padding-top: 50px;
+	}
+	@include phones {
+		padding-top: 0;
+		margin-top: 45px;
+	}
 }
 
 .footer__title {
 	font-size: 72px;
 	@include jenya(lato);
+	@include desktop {
+		font-size: 62px;
+	}
+	@include laptop {
+		font-size: 46px;
+	}
+	@include phones {
+		font-size: 32px;
+	}
 }
 
 .footer__text {
 	font-size: 48px;
 	@include jenya(lato);
+	@include phones {
+		font-size: 32px;
+	}
 }
 
 .footer__brand {
-
+	position: relative;
+	width: 588px;
+	height: 94px;
+	margin: 0 auto;
+	@include desktop {
+		width: 500px;
+		height: 84px;
+	}
+	@include laptop {
+		width: 400px;
+	}
+	@include phones {
+		width: 280px;
+	}
 }
 
 .footer__brand-pic {
-
+	@include absolute-center;
+	max-width: 99.9%;
+	max-height: 99.9%;
 }
 
 .footer__price {
@@ -316,6 +638,26 @@ p {
 	position: absolute;
 	left: 25%;
 	top: 20%;
+	@include desktop {
+		left: 20%;
+	}
+	@include laptop {
+		left: 10%;
+	}
+	@include tablets {
+		left: 20%;
+	}
+	@include main(510px) {
+		left: 10%;
+	}
+	@include phones {
+		font-size: 22px;
+		position: relative;
+		display: inline-block;
+		left: 0;
+		top: 0;
+		margin-left: 5px;
+	}
 }
 
 .footer__price-old_line {
@@ -334,6 +676,26 @@ p {
 	color: #ff0000;
 	position: absolute;
 	right: 26%;
+	@include desktop {
+		right: 15%;
+	}
+	@include laptop {
+		right: 5%;
+	}
+	@include tablets {
+		right: 15%;
+	}
+	@include main(510px) {
+		right: 10%;
+	}
+	@include phones {
+		font-size: 30px;
+		position: relative;
+		display: inline-block;
+		left: 0;
+		top: 0;
+		margin-left: 40px;
+	}
 }
 
 .footer__button {
@@ -342,6 +704,17 @@ p {
 	height: 62px;
 	width: 355px;
 	margin-top: 105px;
+	@include laptop {
+		width: 300px;
+	}
+	@include tablets {
+		margin-top: 40px;
+	}
+	@include phones {
+		margin-top: 0;
+		width: 232px;
+		height: 40px;
+	}
 }
 
 .footer__button-item {
@@ -351,24 +724,39 @@ p {
 	border: 2px solid #fff;
 	cursor: pointer;
 	color: #fff;
-	height: 100%;
 	width: 100%;
 	padding-bottom: 6px;
+	@include laptop {
+		font-size: 28px;
+	}
+	@include phones {
+		font-size: 24px;
+	}
 }
 
 
 .footer__bottom {
-	height: 60px;
+	min-height: 60px;
 	width: 100%;
 	@include clearfix;
 	background-color: rgba(#000, .5);
 	position: absolute;
 	bottom: 0;
-	& .box {
+	@include phones {
+		min-height: 40px;
+		padding: 5px 0;
+	}
+	& .row {
+		min-height: 60px;
 		position: relative;
-		height: 25px;
-		width: 100%;
-		margin-top: 18px;
+		padding-top: 15px;
+		@include tablets {
+			padding-top: 5px;
+		}
+		@include phones {
+			min-height: 40px;
+			padding-top: 0;
+		}
 	}
 }
 
@@ -379,6 +767,25 @@ p {
 	left: 40.3%;
 	width: 260px;
 	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
+	@include laptop {
+		left: 50px;
+	}
+	@include tablets {
+		display: block;
+		margin: 0 auto;
+		float: none;
+		width: 230px;
+		position: relative;
+		left: 0;
+		right: 0;
+	}
+	@include phones {
+		font-size: 12px;
+		width: 168px;
+	}
 }
 
 .footer__bottom-copy {
@@ -386,4 +793,17 @@ p {
 	color: #fff;
 	right: 50px;
 	position: absolute;
+	@include tablets {
+		display: block;
+		margin: 0 auto;
+		float: none;
+		width: 256px;
+		position: relative;
+		left: 0;
+		right: 0;
+	}
+	@include phones {
+		font-size: 12px;
+		width: 192px;
+	}
 }
