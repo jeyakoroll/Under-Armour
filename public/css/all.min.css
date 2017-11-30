@@ -776,8 +776,41 @@ p {
 }
 
 @media screen and (max-width: 1240px) {
+  .comfort .row {
+    padding-top: 180px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .comfort .row {
+    padding: 200px 0 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .comfort .row {
+    padding: 0px 0 10px;
+  }
+}
+
+@media screen and (max-width: 1240px) {
   .comfort {
-    min-height: 1160px;
+    min-height: 950px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .comfort {
+    min-height: 0;
+    height: auto;
+    background: #000006;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .comfort {
+    margin-top: 0;
+    background: url("../img/back-comfort-mob.png") no-repeat center center/cover;
   }
 }
 
@@ -787,6 +820,13 @@ p {
   text-align: center;
 }
 
+@media screen and (max-width: 480px) {
+  .comfort__title {
+    font-size: 30px;
+    margin-bottom: 55px;
+  }
+}
+
 .comfort__text {
   font-family: 'MyriadProBold';
   font-size: 24px;
@@ -794,6 +834,48 @@ p {
   max-width: 670px;
   margin: -35px auto 0;
   margin-bottom: 100px;
+}
+
+@media screen and (max-width: 1240px) {
+  .comfort__text {
+    margin-bottom: 70px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .comfort__text {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .comfort__text {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .comfort__text {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .comfort__text {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .comfort__text {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .comfort__text {
+    margin-bottom: 0;
+  }
 }
 
 .comfort__content {
@@ -832,6 +914,18 @@ p {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .comfort__content {
+    padding-left: 14%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .comfort__content {
+    padding-left: 10%;
+  }
+}
+
 .comfort__item {
   height: 800px;
   width: 450px;
@@ -866,6 +960,34 @@ p {
   }
 }
 
+@media screen and (max-width: 800px) {
+  .comfort__item {
+    width: 50%;
+    margin: 30px 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .comfort__item {
+    margin: 30px -15px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .comfort__item {
+    float: none;
+    display: block;
+    width: 100%;
+    margin: 30px -15px 50px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .comfort__item {
+    margin: 30px -15px 30px;
+  }
+}
+
 .comfort__item-pic {
   position: relative;
   height: 600px;
@@ -885,6 +1007,27 @@ p {
     height: 300px;
     width: 87%;
     margin: 0 auto 35px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .comfort__item-pic {
+    height: 420px;
+    width: 88%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .comfort__item-pic {
+    height: 385px;
+    width: 280px;
+    margin-bottom: 25px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .comfort__item-pic {
+    margin-bottom: 15px;
   }
 }
 
@@ -936,11 +1079,46 @@ p {
   }
 }
 
+@media screen and (max-width: 800px) {
+  .comfort__item-text {
+    margin-left: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .comfort__item-text {
+    margin-left: 15px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .comfort__item-text {
+    margin-left: 24%;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .comfort__item-text {
+    margin-left: 22%;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .comfort__item-text {
+    margin-left: 20%;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .comfort__item-text {
+    margin-left: 18%;
+  }
+}
+
 .gallery {
   min-height: 1421px;
   background: url("../img/blue-back.png") no-repeat center top/cover;
   margin-top: -150px;
-  display: none;
 }
 
 .gallery .row {

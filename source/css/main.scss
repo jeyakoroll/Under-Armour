@@ -683,9 +683,27 @@ p {
 	position: relative;
 	.row {
 		padding-top: 200px;
+		@include main(1240px) {
+			padding-top: 180px;
+		}
+		@include main(800px) {
+			padding: 200px 0 20px;
+		}
+		@include phones {
+			padding: 0px 0 10px;
+		}
 	}
 	@include main(1240px) {
-		min-height: 1160px;
+		min-height: 950px;
+	}
+	@include main(800px) {
+		min-height: 0;
+		height: auto;
+		background: #000006;
+	}
+	@include phones {
+		margin-top: 0;
+		background: url('../img/back-comfort-mob.png') no-repeat center center/cover;
 	}
 }
 
@@ -693,6 +711,10 @@ p {
 	@include jenya(comfort);
 	font-size: 48px;
 	text-align: center;
+	@include phones {
+		font-size: 30px;
+		margin-bottom: 55px;
+	}
 }
 
 .comfort__text {
@@ -702,6 +724,27 @@ p {
 	max-width: 670px;
 	margin: -35px auto 0;
 	margin-bottom: 100px;
+	@include main(1240px) {
+		margin-bottom: 70px;
+	}
+	@include laptop {
+		margin-bottom: 60px;
+	}
+	@include main(800px) {
+		margin-bottom: 40px;
+	}
+	@include tablets {
+		width: 90%;
+	}
+	@include phones {
+		font-size: 16px
+	}
+	@include main(650px) {
+		margin-bottom: 30px;
+	}
+	@include phones {
+		margin-bottom: 0;
+	}
 }
 
 .comfort__content {
@@ -719,6 +762,12 @@ p {
 	@include laptop {
 		width: 99%;
 		padding-left: 6%;
+	}
+	@include tablets {
+		padding-left: 14%;
+	}
+	@include main(650px) {
+		padding-left: 10%;
 	}
 }
 
@@ -742,6 +791,22 @@ p {
 	@include laptop {
 		margin: 0 -38px;
 	}
+	@include main(800px) {
+		width: 50%;
+		margin: 30px 0;
+	}
+	@include tablets {
+		margin: 30px -15px;
+	}
+	@include main(650px) {
+		float: none;
+		display: block;
+		width: 100%;
+		margin: 30px -15px 50px;
+	}
+	@include phones {
+		margin: 30px -15px 30px;
+	}
 }
 
 .comfort__item-pic {
@@ -757,6 +822,18 @@ p {
 		height: 300px;
 		width: 87%;
 		margin: 0 auto 35px;
+	}
+	@include main(800px) {
+		height: 420px;
+		width: 88%;
+	}
+	@include tablets {
+		height: 385px;
+		width: 280px;
+		margin-bottom: 25px
+	}
+	@include phones {
+		margin-bottom: 15px;
 	}
 }
 
@@ -791,6 +868,24 @@ p {
 		margin-left: -10px;
 		font-size: 18px;
 	}
+	@include main(800px) {
+		margin-left: 30px;
+	}
+	@include tablets {
+		margin-left: 15px;
+	}
+	@include main(650px) {
+		margin-left: 24%;
+	}
+	@include main(460px) {
+		margin-left: 22%;
+	}
+	@include main(370px) {
+		margin-left: 20%;
+	}
+	@include main(340px) {
+		margin-left: 18%;
+	}
 }
 
 // gallery area
@@ -798,7 +893,6 @@ p {
 	min-height: 1421px;
 	background: url('../img/blue-back.png') no-repeat center top/cover;
 	margin-top: -150px;
-	display: none;
 	.row {
 		@include clearfix;
 		padding: 150px 26px 0;
