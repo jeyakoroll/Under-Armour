@@ -290,6 +290,10 @@ p {
 		@include phones {
 			width: 280px;
 		}
+		@include small_phones {
+			width: 95%;
+			margin: 0 auto;
+		}
 	}
 	& .footer__price-new {
 		@include tablets {
@@ -341,6 +345,7 @@ p {
 // about area
 .about {
 	min-height: 1130px;
+	padding-top: 20px;
   background: url(../img/back-advantuges.png) no-repeat center top/cover;
 }
 
@@ -349,12 +354,22 @@ p {
 	@include jenya(comfort);
 	text-align: center;
 	margin-bottom: 60px;
+	@include tablets {
+		margin-bottom: 40px;
+		font-size: 36px;
+	}
+	@include phones {
+		font-size: 30px;
+	}
 }
 
 .about__top {
 	@include clearfix;
 	position: relative;
 	margin-bottom: 60px;
+	@include laptop {
+		margin-bottom: 45px;
+	}
 }
 
 .about__brand {
@@ -363,6 +378,22 @@ p {
 	float: left;
 	position: relative;
 	margin-top: 30px;
+	@include desktop {
+		width: 500px;
+		margin-top: 27px;
+	}
+	@include laptop {
+		width: 400px;
+		margin-top: 10px;
+	}
+	@include tablets {
+		float: none;
+		display: block;
+		margin: 0 auto 10px;
+	}
+	@include phones {
+		width: 280px;
+	}
 }
 
 .about__brand-item {
@@ -377,6 +408,19 @@ p {
 	width: 45%;
 	font-size: 24px;
 	@include jenya(mabold);
+	@include desktop {
+		font-size: 23px;
+	}
+	@include laptop {
+		font-size: 18px;
+	}
+	@include tablets {
+		float: none;
+		display: block;
+		margin: 0 auto 10px;
+		width: 80%;
+		padding-left: 5%;
+	}
 }
 
 .about__bottom {
@@ -388,6 +432,9 @@ p {
 	@include jenya(comfort);
 	text-align: center; 
 	margin-bottom: 35px;
+	@include phones {
+		font-size: 24px;
+	}
 }
 
 .about__bottom-content {
@@ -400,6 +447,16 @@ p {
 	position: relative;
 	width: 25%;
 	float: left;
+	@include tablets {
+		margin-bottom: 50px;
+		width: 50%;
+	}
+	@include phones {
+		float: none;
+		display: block;
+		margin: 0 auto 50px;
+		width: 100%;
+	}
 }
 
 .about__bottom-pic {
@@ -407,6 +464,10 @@ p {
 	height: 200px;
 	position: relative;
 	margin: 0	auto;
+	@include desktop {
+		width: 150px;
+		height: 150px;
+	}
 }
 
 .about__bottom-pic_item {
@@ -417,9 +478,23 @@ p {
 
 .about__bottom-text {
 	font-size: 18px;
-	width: 72%;
+	width: 80%;
 	margin: 0 auto;
 	margin-top: 40px;
+	padding-left: 5%;
+	@include desktop {
+		width: 85%;
+	}
+	@include laptop {
+		width: 90%;
+		font-size: 16px;
+	}
+	@include phones {
+		text-align: center;
+		font-size: 14px;
+		width: 70%;
+		padding-left: 0;
+	}
 }
 
 // property area
@@ -428,11 +503,26 @@ p {
 	position: relative;
 	background: transparent;
 	z-index: 2;
+	@include tablets {
+		margin-top: 0;
+	}
 	.row {
 		min-height: 1025px;
 		background-color: #e5f2fa;
 		border-radius: 15px;
 		box-shadow: 0px -2px 20px #ccc;
+		@include laptop {
+			min-height: 0;
+			height: auto;
+			padding-bottom: 40px;
+		}
+		@include tablets {
+			border-radius: 0;
+			padding: 25px 0;
+		}
+		@include phones {
+			padding: 50px 0;
+		}
 	}
 }
 
@@ -440,12 +530,27 @@ p {
 	font-size: 48px;
 	@include jenya(comfort);
 	text-align: center;
+	@include tablets {
+		margin-bottom: 50px;
+		font-size: 32px;
+	}
+	@include main(690px) {
+		margin-bottom: 70px;
+	}
+	@include phones {
+		font-size: 26px;
+		margin-top: 0;
+		margin-bottom: 25px;
+	}
 }
 
 .property__top {
 	@include clearfix;
 	padding-left: 25px;
 	margin-top: -10%;
+	@include phones {
+		padding-left: 0;
+	}
 }
 
 .property__top-left {
@@ -454,6 +559,9 @@ p {
 	width: 261px;
 	height: 588px;
 	margin-right: 50px;
+	@include laptop {
+		display: none;
+	}
 }
 
 .property__top-left_pic {
@@ -468,18 +576,48 @@ p {
 	width: 807px;
 	height: 336px;
 	margin-top: 13%;
+	@include desktop {
+		width: 65%;
+	}
+	@include laptop {
+		float:  none;
+		display: block;
+		margin: 50px auto;
+		width: 90%;
+	}
+	@include tablets {
+		margin: 0 auto;
+	}
+	@include main(680px) {
+		margin: 0 auto 25px;
+	}
 }
 
 .property__top-right_pic {
 	@include absolute-center;
 	max-width: 99.9%;
 	max-height: 99.9%;
+	@include phones {
+		display: none;
+	}
+	&-mob {
+		@include absolute-center;
+		max-width: 99.9%;
+		max-height: 99.9%;
+		display: none;
+		@include phones {
+			display: block;
+		}
+	}
 }
 
 .property__bottom {
 	@include clearfix;
 	padding-left: 25px;
 	margin-top: -30px;
+	@include phones {
+		padding-left: 0;
+	}
 }
 
 .property__bottom-left {
@@ -490,12 +628,33 @@ p {
 	margin-right: 60px;
 	margin-left: 15px;
 	margin-top: -40px;
+	@include desktop {
+		width: 65%;
+	}
+	@include laptop {
+		float:  none;
+		display: block;
+		margin: 0 auto;
+		width: 90%;
+	}
 }
 
 .property__bottom-left_pic {
 	@include absolute-center;
 	max-width: 99.9%;
 	max-height: 99.9%;
+	@include phones {
+		display: none;
+	}
+	&-mob {
+		@include absolute-center;
+		max-width: 99.9%;
+		max-height: 99.9%;
+		display: none;
+		@include phones {
+			display: block;
+		}
+	}
 }
 
 .property__bottom-right {
@@ -504,6 +663,9 @@ p {
 	width: 210px;
 	height: 431px;
 	margin-top: -50px;
+	@include laptop {
+		display: none;
+	}
 }
 
 .property__bottom-right_pic {
@@ -552,11 +714,11 @@ p {
 	}
 	@include main(1240px) {
 		width: 97%;
-		margin-left: 3%;
+		padding-left: 10%;
 	}
 	@include laptop {
 		width: 99%;
-		margin-left: 1%;
+		padding-left: 6%;
 	}
 }
 
@@ -574,8 +736,11 @@ p {
 		margin: 0 -10px;
 		height: auto;
 	}
+	@include desktop {
+		margin: 0 -20px;
+	}
 	@include laptop {
-		margin: 0 -33px;
+		margin: 0 -38px;
 	}
 }
 
@@ -624,7 +789,7 @@ p {
 	}
 	@include main(1240px) {
 		margin-left: -10px;
-		font-size: 22px;
+		font-size: 18px;
 	}
 }
 
@@ -633,6 +798,7 @@ p {
 	min-height: 1421px;
 	background: url('../img/blue-back.png') no-repeat center top/cover;
 	margin-top: -150px;
+	display: none;
 	.row {
 		@include clearfix;
 		padding: 150px 26px 0;
@@ -909,7 +1075,7 @@ p {
 	min-height: 645px;
 	margin-top: -3px;
 	margin-bottom: -1px;
-	// position: relative;
+	display: none;
 	background: url('../img/discount-back.png') no-repeat center top/cover;
 	@include clearfix;
 }
@@ -1030,6 +1196,7 @@ p {
 	min-height: 735px;
 	background: url('../img/back-delivery.png') no-repeat center top/cover;
 	padding-top: 15px;
+	display: none;
 }
 
 .delivery__title {
@@ -1106,6 +1273,7 @@ p {
 // revievs area
 .revievs {
 	min-height: 760px;
+	display: none;
 	background: url('../img/back-revievs.png') no-repeat center top/cover;
 	padding-top: 15px;
 }
@@ -1152,7 +1320,17 @@ p {
 	color: #fff;
 	font-size: 14px;
 	padding: 10px;
+	position: relative;
 	border-radius: 10px 0 10px 0;
+	&::before {
+		content: url('../img/delta.png');
+		width: 11px;
+		height: 10px;
+		position: absolute;
+		bottom: 5px;
+		left: -10px;
+		display: block;
+	}
 }
 
 .revievs__item-name {
@@ -1295,6 +1473,9 @@ p {
 	}
 	@include phones {
 		width: 280px;
+	}
+	@include small_phones {
+		width: 95%;
 	}
 }
 
