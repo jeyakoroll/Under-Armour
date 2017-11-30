@@ -1029,6 +1029,7 @@ p {
 .delivery {
 	min-height: 735px;
 	background: url('../img/back-delivery.png') no-repeat center top/cover;
+	padding-top: 15px;
 }
 
 .delivery__title {
@@ -1106,6 +1107,61 @@ p {
 .revievs {
 	min-height: 760px;
 	background: url('../img/back-revievs.png') no-repeat center top/cover;
+	padding-top: 15px;
+}
+
+.revievs__title {
+	color: #014991;
+	font-size: 48px;
+	@include jenya(comfort);
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+.revievs__content {
+	@include clearfix;
+}
+
+.revievs__item {
+	width: 46%;
+	height: 200px;
+	float: left;
+	@include clearfix;
+	margin: 20px 20px 40px;
+	position: relative;
+}
+
+.revievs__item-pic {
+	width: 125px;
+	height: 125px;
+	position: absolute;
+	bottom: 0;
+}
+
+.revievs__item-pic_elem {
+	@include absolute-center;
+	max-width: 99.9%;
+	max-height: 99.9%;
+}
+
+.revievs__item-text {
+	float: right;
+	width: 373px;
+	height: 163px;
+	background-color: #014991;
+	color: #fff;
+	font-size: 14px;
+	padding: 10px;
+	border-radius: 10px 0 10px 0;
+}
+
+.revievs__item-name {
+	@include jenya(mabold);
+	font-size: 18px;
+	color: #000;
+	position: absolute;
+	bottom: 1%;
+	left: 40%;
 }
 
 

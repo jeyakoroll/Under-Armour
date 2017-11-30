@@ -1156,6 +1156,7 @@ p {
 .delivery {
   min-height: 735px;
   background: url("../img/back-delivery.png") no-repeat center top/cover;
+  padding-top: 15px;
 }
 
 .delivery__title {
@@ -1251,6 +1252,82 @@ p {
 .revievs {
   min-height: 760px;
   background: url("../img/back-revievs.png") no-repeat center top/cover;
+  padding-top: 15px;
+}
+
+.revievs__title {
+  color: #014991;
+  font-size: 48px;
+  font-family: 'ComfortaaBold';
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.revievs__content:before,
+.revievs__content:after {
+  content: "";
+  display: table;
+}
+
+.revievs__content:after {
+  clear: both;
+}
+
+.revievs__item {
+  width: 46%;
+  height: 200px;
+  float: left;
+  margin: 20px 20px 40px;
+  position: relative;
+}
+
+.revievs__item:before,
+.revievs__item:after {
+  content: "";
+  display: table;
+}
+
+.revievs__item:after {
+  clear: both;
+}
+
+.revievs__item-pic {
+  width: 125px;
+  height: 125px;
+  position: absolute;
+  bottom: 0;
+}
+
+.revievs__item-pic_elem {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  max-width: 99.9%;
+  max-height: 99.9%;
+}
+
+.revievs__item-text {
+  float: right;
+  width: 373px;
+  height: 163px;
+  background-color: #014991;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px;
+  -webkit-border-radius: 10px 0 10px 0;
+  border-radius: 10px 0 10px 0;
+}
+
+.revievs__item-name {
+  font-family: 'MyriadProBold';
+  font-size: 18px;
+  color: #000;
+  position: absolute;
+  bottom: 1%;
+  left: 40%;
 }
 
 .empty {
