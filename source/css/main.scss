@@ -214,10 +214,10 @@ button:focus {
     outline: none;
 }
 
-input::-webkit-input-placeholder {color:#fff;}
-input::-moz-placeholder {color:#fff;}/* Firefox 19 */
-input:-moz-placeholder {color:#fff;}/* Firefox 18 */
-input:-ms-input-placeholder {color:#fff;}
+input::-webkit-input-placeholder {color:#3e3e3e;}
+input::-moz-placeholder {color:#3e3e3e;}/* Firefox 19 */
+input:-moz-placeholder {color:#3e3e3e;}/* Firefox 18 */
+input:-ms-input-placeholder {color:#3e3e3e;}
 
 p {
 	padding: 0;
@@ -427,6 +427,7 @@ p {
 	margin-top: -140px;
 	position: relative;
 	background: transparent;
+	z-index: 2;
 	.row {
 		min-height: 1025px;
 		background-color: #e5f2fa;
@@ -517,6 +518,7 @@ p {
 	background: url('../img/back-comfort.png') no-repeat center top/cover;
 	color: #fff;
 	margin-top: -170px;
+	position: relative;
 	.row {
 		padding-top: 200px;
 	}
@@ -711,6 +713,9 @@ p {
 	@include jenya(mabold);
 	float: left;
 	margin-right: 5px;
+	&-size {
+		font-size: 14px;
+	}
 }
 
 .gallery__man-descr_size {
@@ -718,6 +723,7 @@ p {
 	text-decoration: underline;
 	width: 135px;
 	float: left;
+	margin-top: 3px;
 	&:hover {
 		cursor: pointer;
 	}
@@ -726,7 +732,6 @@ p {
 .gallery__man-checkbox {
 	width: 172px;
 	float: left;
-	margin-right: 5px;
 }
 
 .regular-checkbox {
@@ -735,7 +740,7 @@ p {
 
 .regular-checkbox + label {
 	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
-	padding: 11px 14px;
+	padding: 11px 13px;
 	border: 2px solid #0099cc;
 	display: inline-block;
 	position: relative;
@@ -859,14 +864,6 @@ p {
 	padding-left: 45px;
 }
 
-.gallery__woman-descr_item {
-
-}
-
-.gallery__woman-descr_bold {
-
-}
-
 .gallery__woman-form {
 	width: 466px;
 	height: 210px;
@@ -878,7 +875,6 @@ p {
 // form
 .footer__form-order {
 	@include clearfix;
-	color: #3e3e3e;
 	padding: 0 6px;
 	& .form-group:last-child {
 		text-align: center;
@@ -893,6 +889,7 @@ p {
 	float: left;
 	font-size: 14px;
 	margin: 10px;
+	padding-left: 8px;
 }
 
 .footer__form-button {
@@ -906,6 +903,211 @@ p {
 	text-transform: uppercase;
 	margin: 10px auto 0;
 }
+
+// discount area
+.discount {
+	min-height: 645px;
+	margin-top: -3px;
+	margin-bottom: -1px;
+	// position: relative;
+	background: url('../img/discount-back.png') no-repeat center top/cover;
+	@include clearfix;
+}
+
+.discount__price {
+	width: 40%;
+	float: left;
+	color: #fff;
+	padding-top: 125px;
+}
+
+.discount__title {
+	@include jenya(caviar);
+	font-size: 48px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.discount__total-wrap {
+	width: 442px;
+	height: 120px;
+	border: 4px solid #fff;
+	position: relative;
+	margin: -30px auto 10px;
+	@include desktop {
+		width: 100%;
+		height: 100px;
+	}
+}
+
+.discount__total {
+	@include jenya(lato);
+	font-size: 100px;
+	color: #ffff00;
+	margin: 0 auto;
+	height: 100%;
+	position: absolute;
+	left: 35px;
+	bottom: 20px;
+	@include desktop {
+		font-size: 80px;
+		bottom: 13px;
+	}
+}
+
+.discount__total-currency {
+	text-transform: uppercase;
+	font-size: 48px;
+	color: #ffff00;
+}
+
+.discount__text {
+	@include jenya(caviar);
+	font-size: 48px;
+	text-align: center;
+	@include desktop {
+		font-size: 36px;
+	}
+}
+
+.discount__photos {
+	float: right;
+	position: relative;
+	height: 645px;
+	width: 55%;
+}
+
+.discount__photos-item {
+	height: 300px;
+	width: 445px;
+	position: absolute;
+	&_first {
+		top: 22px;
+		right: 0;
+		@include main(1420px) {
+			right: 8%;
+			top: 8%;
+		}
+	}
+	&_second {
+		top: 28%;
+		left: -20px;
+		z-index: 1;
+		@include main(1240px) {
+			left: 5%;
+			top: 32%;
+		}
+	}
+	&_third {
+		bottom: 20px;
+		right: -70px;
+		@include main(1420px) {
+			right: -30px;
+		}
+		@include main(1240px) {
+			right: 0px;
+			bottom: 8%;
+		}
+	}
+	@include main(1420px) {
+		width: 390px;
+		height: 270px;
+	}
+	@include main(1240px) {
+		width: 350px;
+		height: 240px;
+	}
+}
+
+.discount__photos-item_pic {
+	@include absolute-center;
+	max-height: 99.9%;
+	max-width: 99.9%;
+}
+
+// delivery area
+.delivery {
+	min-height: 735px;
+	background: url('../img/back-delivery.png') no-repeat center top/cover;
+}
+
+.delivery__title {
+	@include jenya(comfort);
+	font-size: 48px;
+	text-align: center;
+	color: #1e5797;
+	margin-bottom: 75px;
+}
+
+.delivery__content {
+	position: relative;
+	@include clearfix;
+}
+
+.delivery__arrow {
+	position: absolute;
+	&-one {
+		width: 236px;
+		height: 166px;
+		left: 18.5%;
+    top: 14%;
+	}
+	&-two {
+		width: 221px;
+		height: 72px;
+		left: 44.3%;
+    bottom: -107%;
+	}
+	&-three {
+		width: 236px;
+		height: 166px;
+		right: 11.5%;
+    top: 14%;
+	}
+}
+
+.delivery__arrow-pic {
+	@include absolute-center;
+	max-width: 99.9%;
+	max-height: 99.9%;
+}
+
+.delivery__item {
+	position: relative;
+	float: left;
+	width: 25%;
+	&:nth-child(2n+1) {
+		bottom: -200px;
+	}
+}
+
+.delivery__item-pic {
+	width: 150px;
+	height: 150px;
+}
+
+.delivery__item-pic_elem {
+	@include absolute-center;
+	max-width: 99.9%;
+	max-height: 99.9%;
+}
+
+.delivery__item-text {
+	font-size: 24px;
+	text-align: center;
+	margin-bottom: -60px;
+}
+
+
+
+
+
+// revievs area
+.revievs {
+	min-height: 760px;
+	background: url('../img/back-revievs.png') no-repeat center top/cover;
+}
+
 
 
 
