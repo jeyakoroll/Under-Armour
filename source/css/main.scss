@@ -893,9 +893,26 @@ p {
 	min-height: 1421px;
 	background: url('../img/blue-back.png') no-repeat center top/cover;
 	margin-top: -150px;
+	@include desktop {
+		min-height: 0;
+		height: auto;
+		padding-bottom: 90px;
+	}
+	@include laptop {
+		padding-bottom: 80px;
+	}
+	@include tablets {
+		padding-bottom: 65px;
+	}
+	@include phones {
+		padding-bottom: 50px;
+	}
 	.row {
 		@include clearfix;
 		padding: 150px 26px 0;
+		@include phones {
+			padding: 150px 0 0;
+		}
 	}
 }
 
@@ -903,17 +920,50 @@ p {
 	font-size: 48px;
 	@include jenya(comfort);
 	text-align: center;
+	@include laptop {
+		font-size: 36px;
+	}
+	@include tablets {
+		font-size: 32px;
+	}
+	@include phones {
+		font-size: 30px;
+	}
 }
 
 // gallery__man aside
 .gallery__man {
 	width: 46%;
 	float: left;
+	@include desktop {
+		width: 45%;
+	}
+	@include laptop {
+		float: none;
+		display: block;
+		width: 100%;
+		margin-bottom: 50px;
+	}
+	@include phones {
+		margin-bottom: 30px;
+	}
 }
 
 .gallery__man-preview {
 	@include clearfix;
 	margin-bottom: 60px;
+	@include laptop {
+		width: 508px;
+		margin: 0 auto 60px;
+	}
+	@include tablets {
+		width: 395px;
+		margin: 0 auto 30px;
+	}
+	@include phones {
+		width: 280px;
+		margin-bottom: 5px;
+	}
 }
 
 .gallery__man-dots {
@@ -921,6 +971,24 @@ p {
 	height: 580px;
 	margin-right: 20px;
 	float: left;
+	@include desktop {
+		width: 80px;
+		height: 475px;
+		margin-right: 15px;
+	}
+	@include laptop {
+		width: 100px;
+		height: 580px;
+		margin-right: 20px;
+	}
+	@include tablets {
+		width: 80px;
+		height: 475px;
+		margin-right: 15px;
+	}
+	@include phones {
+		display: none;
+	}
 }
 
 .gallery__man-dots_item {
@@ -936,6 +1004,21 @@ p {
 	&:last-child {
 		margin-bottom: 0;
 	}
+	@include desktop {
+		width: 80px;
+		height: 80px;
+		margin: 15px 0;
+	}
+	@include laptop {
+		width: 100px;
+		height: 100px;
+		margin: 20px 0;
+	}
+	@include tablets {
+		width: 80px;
+		height: 80px;
+		margin: 15px 0;
+	}
 }
 
 .gallery__man-dots_pic {
@@ -944,11 +1027,53 @@ p {
 	max-height: 99.9%;
 }
 
+// gallery dots on mobile
+.gallery__man-dots_mob {
+	display: none;
+	@include phones {
+		display: inline-block;
+		position: relative;
+		width: 100%;
+		height: 80px;
+
+	}
+	& .gallery__man-dots_item {
+		display: inline-block;
+		width: 62px;
+		height: 62px;
+		float: none;
+		margin: 15px 4.6px;
+		&:first-child {
+			margin-left: 0;
+		}
+		&:last-child {
+			margin-bottom: 15px;
+			margin-right: 0;
+		}
+	}
+}
+
 .gallery__man-show {
 	max-width: 388px;
 	height: 580px;
 	float: left;
 	border: 1px solid #494b4d;
+	@include desktop {
+		max-width: 300px;
+    height: 460px;
+	}
+	@include laptop {
+		max-width: 388px;
+		height: 580px;
+	}
+	@include tablets {
+		max-width: 300px;
+    height: 460px;
+	}
+	@include phones {
+		max-width: 280px;
+    height: 422px;
+	}
 }
 
 .gallery__man-show_pic {
@@ -958,14 +1083,72 @@ p {
 
 .gallery__man-descr {
 	padding-left: 45px;
+	@include desktop {
+		padding-left: 25px;
+	}
+	@include laptop {
+		width: 525px;
+		margin: 0 auto;
+		padding-left: 45px;
+	}
+	@include tablets {
+		width: 400px;
+		padding-left: 16px;
+	}
+	@include phones {
+		width: 280px;
+		padding-left: 0;
+	}
 }
 
 .gallery__man-descr_item {
 	font-size: 16px;
 	line-height: 20px;
+	@include phones {
+		font-size: 14px;
+	}
 	&:last-child {
 		margin-top: 10px;
 		@include clearfix;
+		@include desktop {
+			height: 60px;
+		}
+		@include laptop {
+			height: auto;
+		}
+	}
+	&:nth-child(1) {
+		& .gallery__man-descr_bold {
+			margin-right: 70px;
+			@include desktop {
+				margin-right: 70px;
+			}
+			@include phones {
+				margin-right: 32px;
+			}
+		}
+	}
+	&:nth-child(2) {
+		& .gallery__man-descr_bold {
+			margin-right: 160px;
+			@include desktop {
+				margin-right: 160px;
+			}
+			@include phones {
+				margin-right: 32px;
+			}
+		}
+	}
+	&:nth-child(3) {
+		& .gallery__man-descr_bold {
+			margin-right: 112px;
+			@include desktop {
+				margin-right: 112px;
+			}
+			@include phones {
+				margin-right: 32px;
+			}
+		}
 	}
 }
 
@@ -987,11 +1170,33 @@ p {
 	&:hover {
 		cursor: pointer;
 	}
+	@include desktop {
+		margin-top: 12px;
+	}
+	@include laptop {
+		margin-top: 3px;
+	}
+	@include phones {
+		width: 114px;
+		float: right;
+	}
 }
 
 .gallery__man-checkbox {
 	width: 172px;
 	float: left;
+	@include desktop {
+		margin-top: 10px;
+		margin-left: -5px;
+	}
+	@include laptop {
+		margin-top: 0;
+		margin-left: 0;
+	}
+	@include phones {
+		width: 166px;
+		margin-left: -5px;
+	}
 }
 
 .regular-checkbox {
@@ -1050,14 +1255,56 @@ p {
 	border: 2px solid #0099cc;
 	background-color: #eae7e9;
 	margin: 25px auto 0;
+	@include desktop {
+		height: auto;
+		width: 100%;
+		min-height: 210px;
+		padding-bottom: 20px;
+	}
+	@include laptop {
+		width: 466px;
+	}
+	@include tablets {
+		width: 414px;
+	}
+	@include phones {
+		width: 280px;
+	}
+	& .form-group {
+		@include desktop {
+			text-align: center;
+		}
+		@include laptop {
+			text-align: left;
+		}
+		@include tablets {
+			text-align: center;
+		}
+	}
 }
 
 .gallery__man-form_price {
 	height: 75px;
 	width: 100%;
 	position: relative;
+	@include phones {
+		height: 45px;
+	}
 	& .footer__price-old {
 		left: 70px;
+		@include desktop {
+			left: 50px;
+		}
+		@include laptop {
+			left: 70px;
+		}
+		@include tablets {
+			left: 50px;
+		}
+		@include phones {
+			font-size: 22px;
+			left: 30px;
+		}
 	}
 	& .footer__price-old_line {
 		background-color: #ce0c14;
@@ -1065,6 +1312,18 @@ p {
 	& .footer__price-new {
 		right: 80px;
 		color: #ce0c14;
+		@include desktop {
+			right: 20px;
+		}
+		@include laptop {
+			right: 80px;
+		}
+		@include tablets {
+			right: 20px;
+		}
+		@include phones {
+			font-size: 30px;
+		}
 	}
 }
 
@@ -1072,12 +1331,32 @@ p {
 .gallery__woman {
 	@include clearfix;
 	float: right;
+	@include desktop {
+		width: 45%;
+	}
+	@include laptop {
+		width: 100%;
+	}
 }
 
 .gallery__woman-preview {
 	@include clearfix;
 	float: right;
 	margin-bottom: 60px;
+	@include laptop {
+		float: none;
+		display: block;
+		margin: 0 auto 60px;
+		width: 508px;
+	}
+	@include tablets {
+		width: 395px;
+		margin-bottom: 30px;
+	}
+	@include phones {
+		width: 280px;
+		margin-bottom: 5px;
+	}
 }
 
 .gallery__woman-dots {
@@ -1085,6 +1364,24 @@ p {
 	height: 580px;
 	margin-right: 20px;
 	float: left;
+	@include desktop {
+		width: 80px;
+		height: 475px;
+		margin-right: 15px;
+	}
+	@include laptop {
+		width: 100px;
+		height: 580px;
+		margin-right: 20px;
+	}
+	@include tablets {
+		width: 80px;
+		height: 475px;
+		margin-right: 15px;
+	}
+	@include phones {
+		display: none;
+	}
 }
 
 .gallery__woman-dots_item {
@@ -1100,6 +1397,21 @@ p {
 	&:last-child {
 		margin-bottom: 0;
 	}
+	@include desktop {
+		width: 80px;
+		height: 80px;
+		margin: 15px 0;
+	}
+	@include laptop {
+		width: 100px;
+		height: 100px;
+		margin: 20px 0;
+	}
+	@include tablets {
+		width: 80px;
+		height: 80px;
+		margin: 15px 0;
+	}
 }
 
 .gallery__woman-dots_pic {
@@ -1108,11 +1420,52 @@ p {
 	max-height: 99.9%;
 }
 
+// gallery dots on mobile
+.gallery__woman-dots_mob {
+	display: none;
+	@include phones {
+		display: inline-block;
+		position: relative;
+		width: 100%;
+		height: 80px;
+	}
+	& .gallery__woman-dots_item {
+		display: inline-block;
+		width: 62px;
+		height: 62px;
+		float: none;
+		margin: 15px 4.6px;
+		&:first-child {
+			margin-left: 0;
+		}
+		&:last-child {
+			margin-bottom: 15px;
+			margin-right: 0;
+		}
+	}
+}
+
 .gallery__woman-show {
 	max-width: 388px;
 	height: 580px;
 	float: left;
 	border: 1px solid #494b4d;
+	@include desktop {
+		max-width: 300px;
+    height: 460px;
+	}
+	@include laptop {
+		max-width: 388px;
+		height: 580px;
+	}
+	@include tablets {
+		max-width: 300px;
+    height: 460px;
+	}
+	@include phones {
+		max-width: 280px;
+    height: 422px;
+	}
 }
 
 .gallery__woman-show_pic {
@@ -1122,6 +1475,23 @@ p {
 
 .gallery__woman-descr {
 	padding-left: 45px;
+	@include desktop {
+		padding-left: 25px;
+	}
+	@include laptop {
+		width: 525px;
+		height: 130px;
+		margin: 0 auto;
+		padding-left: 45px;
+	}
+	@include tablets {
+		width: 400px;
+		padding-left: 16px;
+	}
+	@include phones {
+		padding-left: 0; 
+		width: 280px;
+	}
 }
 
 .gallery__woman-form {
@@ -1130,6 +1500,19 @@ p {
 	border: 2px solid #0099cc;
 	background-color: #eae7e9;
 	margin: 25px auto 0;
+}
+
+.gallery__br {
+	display: none;
+	@include desktop {
+		display:  block;
+	}
+	@include laptop {
+		display:  none;
+	}
+	@include tablets {
+		display:  block;
+	}
 }
 
 // form
@@ -1150,6 +1533,15 @@ p {
 	font-size: 14px;
 	margin: 10px;
 	padding-left: 8px;
+	@include desktop {
+		float: none;
+	}
+	@include laptop {
+		float: left;
+	}
+	@include tablets {
+		float: none;
+	}
 }
 
 .footer__form-button {
@@ -1162,6 +1554,11 @@ p {
 	color: #fff;
 	text-transform: uppercase;
 	margin: 10px auto 0;
+	@include phones {
+		height: 31px;
+		width: 203px;
+		font-size: 18px;
+	}
 }
 
 // discount area
@@ -1620,6 +2017,10 @@ p {
 	transform: rotate(-10deg);
 	left: -8%;
 	top: 45%;
+	@include phones {
+		left: 0;
+		top: 43%;
+	}
 }
 
 .footer__price-new {
