@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="public/css/normalize.css">
 	<link rel="stylesheet" href="public/css/fonts.css">
 	<link rel="stylesheet" href="public/css/bootstrap.min.css">
+	<link rel="stylesheet" href="public/css/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="public/css/owl.carousel.min.css">
 	<link rel="stylesheet" href="public/css/owl.theme.default.min.css">
 	<link rel="stylesheet" href="public/css/all.min.css">
@@ -48,8 +49,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="footer__button">
-					<button class="footer__button-item">Заказать по скидке</button>
+				<div class="footer__button " data-form="buy">
+					<button class="footer__button-item hvr-wobble-to-top-right">Заказать по скидке</button>
 				</div>
 			</header>
 			<!-- Site about -->
@@ -112,13 +113,17 @@
 						<div class="property__top">
 							<div class="property__top-left"><img src="public/img/woman-prop.png" alt="" class="property__top-left_pic"></div>
 							<div class="property__top-right">
-								<img src="public/img/prop-moisture.png" alt="" class="property__top-right_pic">
+								<a href="public/img/prop-moisture.png" data-fancybox>
+									<img src="public/img/prop-moisture.png" alt="" class="property__top-right_pic">
+								</a>
 								<img src="public/img/prop-mob-one.png" alt="" class="property__top-right_pic-mob">
 							</div>
 						</div>
 						<div class="property__bottom">
 							<div class="property__bottom-left">
-								<img src="public/img/prop-elasticity.png" alt="" class="property__bottom-left_pic">
+								<a href="public/img/prop-elasticity.png" data-fancybox>
+									<img src="public/img/prop-elasticity.png" alt="" class="property__bottom-left_pic">
+								</a>
 								<img src="public/img/prop-mob-two.png" alt="" class="property__bottom-left_pic-mob">
 							</div>
 							<div class="property__bottom-right"><img src="public/img/man-prop.png" alt="" class="property__bottom-right_pic"></div>
@@ -176,7 +181,7 @@
 			<section class="gallery">
 				<div class="container">
 					<div class="row">
-						<h3 class="gallery__title">Умное термобельё Under Armour</h3>
+						<h3 class="gallery__title" data-section="buy">Умное термобельё Under Armour</h3>
 						<aside class="gallery__man">
 							<div class="gallery__man-preview">
 								<ul class="gallery__man-dots">
@@ -196,8 +201,22 @@
 										<div style="background: url('public/img/man/05.jpg') no-repeat center top/cover" alt="" class="gallery__man-dots_pic"></div>
 									</li>
 								</ul>
-								<div class="gallery__man-show">
-									<img src="public/img/man/02.jpg" alt="" class="gallery__man-show_pic">
+								<div class="gallery__man-show owl-carousel">
+									<a href="public/img/man/01.jpg" data-fancybox="images" class="gallery__man-show_prev">
+										<img src="public/img/man/01.jpg" alt="" class="gallery__man-show_pic">
+									</a>
+									<a href="public/img/man/02.jpg" data-fancybox="images" class="gallery__man-show_prev">
+										<img src="public/img/man/02.jpg" alt="" class="gallery__man-show_pic">
+									</a>
+									<a href="public/img/man/03.jpg" data-fancybox="images" class="gallery__man-show_prev">
+										<img src="public/img/man/03.jpg" alt="" class="gallery__man-show_pic">
+									</a>
+									<a href="public/img/man/04.jpg" data-fancybox="images" class="gallery__man-show_prev">
+										<img src="public/img/man/04.jpg" alt="" class="gallery__man-show_pic">
+									</a>
+									<a href="public/img/man/05.jpg" data-fancybox="images" class="gallery__man-show_prev">
+										<img src="public/img/man/05.jpg" alt="" class="gallery__man-show_pic">
+									</a>
 								</div>
 								<ul class="gallery__man-dots_mob">
 									<li class="gallery__man-dots_item">
@@ -239,10 +258,10 @@
 									</span>
 									<br class="gallery__br">
 									<div class="gallery__man-checkbox">
-										<input type="checkbox" id="checkbox-1-1" class="regular-checkbox" /><label for="checkbox-1-1" data-check="first" class="first check__color"><span class="check__color-mark">S</span></label><input type="checkbox" checked id="checkbox-1-2" class="regular-checkbox" /><label for="checkbox-1-2" data-check="second" class="second check__color"><span class="check__color-mark mark-center">M</span></label><input type="checkbox" id="checkbox-1-3" class="regular-checkbox" /><label for="checkbox-1-3" data-check="third" class="third check__color"><span class="check__color-mark">L</span></label>
-										<input type="checkbox" id="checkbox-1-4" class="regular-checkbox" /><label for="checkbox-1-4" data-check="third" class="third check__color"><span class="check__color-mark mark-center">XL</span></label>
+										<input type="checkbox" id="checkbox-1-1" class="regular-checkbox" /><label for="checkbox-1-1" data-check="first" class="first check__size"><span class="check__size-mark">S</span></label><input type="checkbox" id="checkbox-1-2" class="regular-checkbox" /><label for="checkbox-1-2" data-check="second" class="second check__size"><span class="check__size-mark mark-center">M</span></label><input type="checkbox" id="checkbox-1-3" class="regular-checkbox" /><label for="checkbox-1-3" data-check="third" class="third check__size"><span class="check__size-mark">L</span></label>
+										<input type="checkbox" id="checkbox-1-4" class="regular-checkbox" /><label for="checkbox-1-4" data-check="fourth" class="fourth check__size"><span class="check__size-mark mark-center">XL</span></label>
 									</div>
-									<p class="gallery__man-descr_size">Таблица размеров</p>
+									<p class="gallery__man-descr_size cd-popup-trigger">Таблица размеров</p>
 								</li>
 							</ul>
 							<div class="gallery__man-form">
@@ -289,8 +308,22 @@
 										<div style="background: url('public/img/woman/05.jpg') no-repeat center top/cover" alt="" class="gallery__woman-dots_pic"></div>
 									</li>
 								</ul>
-								<div class="gallery__woman-show">
-									<img src="public/img/woman/02.jpg" alt="" class="gallery__woman-show_pic">
+								<div class="gallery__woman-show owl-carousel">
+									<a href="public/img/woman/01.jpg" data-fancybox="group2" class="gallery__woman-show_prev">
+										<img src="public/img/woman/01.jpg" alt="" class="gallery__woman-show_pic">
+									</a>
+									<a href="public/img/woman/02.jpg" data-fancybox="group2" class="gallery__woman-show_prev">
+										<img src="public/img/woman/02.jpg" alt="" class="gallery__woman-show_pic">
+									</a>
+									<a href="public/img/woman/03.jpg" data-fancybox="group2" class="gallery__woman-show_prev">
+										<img src="public/img/woman/03.jpg" alt="" class="gallery__woman-show_pic">
+									</a>
+									<a href="public/img/woman/04.jpg" data-fancybox="group2" class="gallery__woman-show_prev">
+										<img src="public/img/woman/04.jpg" alt="" class="gallery__woman-show_pic">
+									</a>
+									<a href="public/img/woman/05.jpg" data-fancybox="group2" class="gallery__woman-show_prev">
+										<img src="public/img/woman/05.jpg" alt="" class="gallery__woman-show_pic">
+									</a>
 								</div>
 								<ul class="gallery__woman-dots_mob">
 									<li class="gallery__woman-dots_item">
@@ -332,10 +365,10 @@
 									</span>
 									<br class="gallery__br">
 									<div class="gallery__man-checkbox">
-										<input type="checkbox" id="checkbox-2-1" class="regular-checkbox" /><label for="checkbox-2-1" data-check="first" class="first check__color"><span class="check__color-mark">S</span></label><input type="checkbox" checked id="checkbox-2-2" class="regular-checkbox" /><label for="checkbox-2-2" data-check="second" class="second check__color"><span class="check__color-mark mark-center">M</span></label><input type="checkbox" id="checkbox-2-3" class="regular-checkbox" /><label for="checkbox-2-3" data-check="third" class="third check__color"><span class="check__color-mark">L</span></label>
-										<input type="checkbox" id="checkbox-2-4" class="regular-checkbox" /><label for="checkbox-2-4" data-check="third" class="third check__color"><span class="check__color-mark mark-center">XL</span></label>
+										<input type="checkbox" id="checkbox-2-1" class="regular-checkbox" /><label for="checkbox-2-1" data-check="first" class="first check__size"><span class="check__size-mark">S</span></label><input type="checkbox" id="checkbox-2-2" class="regular-checkbox" /><label for="checkbox-2-2" data-check="second" class="second check__size"><span class="check__size-mark mark-center">M</span></label><input type="checkbox" id="checkbox-2-3" class="regular-checkbox" /><label for="checkbox-2-3" data-check="third" class="third check__size"><span class="check__size-mark">L</span></label>
+										<input type="checkbox" id="checkbox-2-4" class="regular-checkbox" /><label for="checkbox-2-4" data-check="fourth" class="fourth check__size"><span class="check__size-mark mark-center">XL</span></label>
 									</div>
-									<p class="gallery__man-descr_size">Таблица размеров</p>
+									<p class="gallery__man-descr_size cd-popup-trigger">Таблица размеров</p>
 								</li>
 							</ul>
 							<div class="gallery__man-form">
@@ -448,14 +481,14 @@
 								</p>
 								<p class="revievs__item-name">Виктор</p>
 							</div>
-							<div class="revievs__item">
+							<div class="revievs__item revievs__item-mob_hov">
 								<div class="revievs__item-pic"><img src="public/img/rev-three.jpg" alt="" class="revievs__item-pic_elem"></div>
 								<p class="revievs__item-text">
 									Ну и ну! Ваше термобелье превосходит шерстяное в десятки раз. Признаться, перед покупкой волновался, так как ничего не слышал о бренде анде армор. Но прогуглив и изучив историю довольно громкого американского бренда пришел к выводу, что необходимо брать и не прогадал!!!
 								</p>
 								<p class="revievs__item-name">Дима</p>
 							</div>
-							<div class="revievs__item">
+							<div class="revievs__item revievs__item-mob_hov">
 								<div class="revievs__item-pic"><img src="public/img/rev-four.jpg" alt="" class="revievs__item-pic_elem"></div>
 								<p class="revievs__item-text">
 									По мере бега чувствуется невидимый стимул и тонус, который придает ваша замечательная модель от Under Armour. Настолько удивительно комфортно во время пробежки под назойливым дождем я себя никогда не чувствовала. Рекомендую всем спортсменам! 
@@ -499,61 +532,97 @@
 						</div>
 					</div>
 				</div>
-			<div class="footer__button">
-				<button class="footer__button-item">Заказать по скидке</button>
+			<div class="footer__button" data-form="buy">
+				<button class="footer__button-item hvr-wobble-to-top-right">Заказать по скидке</button>
 			</div>
 			<div class="footer__bottom">
 				<div class="container">
 					<div class="row">
-						<a href="#" class="footer__bottom-politics">Политика конфиденциальности</a>
+						<a href="" class="footer__bottom-politics politics swing">Политика конфиденциальности</a>
 						<p class="footer__bottom-copy">Все права защищены. Copyright 2017</p>
 					</div>
 				</div>
 			</div>
 		</footer>
 
-		<!-- <table class="table text-center">
-	  	<tbody>
-	      <tr>
-	  			<td>Мужские размеры</td>
-	  			<td>S</td>
-	  			<td>M</td>
-	  			<td>L</td>
-	  			<td>XL</td>
-	  		</tr>
-	  		<tr>
-	  			<td>Обхват груди</td>
-	  			<td>92</td>
-	  			<td>100</td>
-	  			<td>108</td>
-	  			<td>116</td>
-	  		</tr>
-	  		<tr>
-	  			<td>Обхват талии</td>
-	  			<td>80</td>
-	  			<td>86</td>
-	  			<td>94</td>
-	  			<td>114</td>
-	  		</tr>
-	  		<tr>
-	  			<td>Обхват бедер</td>
-	  			<td>90</td>
-	  			<td>98</td>
-	  			<td>106</td>
-	  			<td>114</td>
-	  		</tr>
-	  		<tr>
-	  			<td>Обхват штанины</td>
-	  			<td>92</td>
-	  			<td>93</td>
-	  			<td>94</td>
-	  			<td>95</td>
-	  		</tr>
-	  	</tbody>
-	  </table> -->
+<!-- popup -->
+		<div class="cd-popup" role="alert">
+			<div class="cd-popup-container table__size-wrap">
+				<div class="table__size">
+					<h4 class="table__size-title">
+						Выберите размер
+					</h4>
+					<table class="table text-center">
+				  	<tbody>
+				      <tr>
+				  			<td>Мужские размеры</td>
+				  			<td>S</td>
+				  			<td>M</td>
+				  			<td>L</td>
+				  			<td>XL</td>
+				  		</tr>
+				  		<tr>
+				  			<td>Обхват груди</td>
+				  			<td>92</td>
+				  			<td>100</td>
+				  			<td>108</td>
+				  			<td>116</td>
+				  		</tr>
+				  		<tr>
+				  			<td>Обхват талии</td>
+				  			<td>80</td>
+				  			<td>86</td>
+				  			<td>94</td>
+				  			<td>114</td>
+				  		</tr>
+				  		<tr>
+				  			<td>Обхват бедер</td>
+				  			<td>90</td>
+				  			<td>98</td>
+				  			<td>106</td>
+				  			<td>114</td>
+				  		</tr>
+				  		<tr>
+				  			<td>Обхват штанины</td>
+				  			<td>92</td>
+				  			<td>93</td>
+				  			<td>94</td>
+				  			<td>95</td>
+				  		</tr>
+				  	</tbody>
+				  </table> 
+				<a href="#0" class="cd-popup-close img-replace">Close</a>
+				</div>
+			</div> <!-- cd-popup-container -->
+		</div> <!-- cd-popup -->
 
+		<!-- popup -->
+		<div class="cd-politics" role="alert">
+			<div class="cd-popup-container">
+				<div class="header__bottom-form form-popup_politic">
+					<!-- <p class="form-popup_politic-title">политика конфиденциальности</p> -->
+					<p class="header__bottom-form_politic">
+						Наш интернет-магазин уважительно относится к правам клиента. Соблюдается строгая конфиденциальность при оформлении заказа. Сведения надёжно сохраняются и защищены от передачи.
+					</p>
+					<br>
+					<p class="header__bottom-form_politic">
+						Согласием на обработку данных клиента исключительно с целью оказания услуг является размещение заказа на сайте.
+					</p>
+					<br>
+					<p class="header__bottom-form_politic">
+						К персональным данным относится личная информация о клиенте: домашний адрес; имя, фамилия, отчество; сведения о рождении; имущественное, семейное положение; личные контакты (телефон, электронная почта) и прочие сведения, которые перечислены в Законе «О персональных данных».
+					</p>
+					<br>
+					<p class="header__bottom-form_politic">
+						Клиент вправе отказаться от обработки персональных данных. Нами в данном случае гарантируется удаление с сайта всех персональных данных в трёхдневный срок в рабочее время. Подобный отказ клиент может оформить простым электронным письмом на адрес, указанный на странице нашего сайта.
+					</p>
+				</div>
+				<a href="#0" class="cd-popup-close img-replace">Close</a>
+			</div> <!-- cd-popup-container -->
+		</div> <!-- cd-politics -->
 <!-- JS -->
 	<script src="public/js/jquery.min.js"></script>
+	<script src="public/js/jquery.fancybox.min.js"></script>
 	<script src="public/js/owl.carousel.min.js"></script>
 	<script src="public/js/main.min.js"></script>
 </body>
