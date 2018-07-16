@@ -251,8 +251,17 @@ p {
 	}
 	& .footer__descr {
 		padding-top: 55px;
+		width: 700px;
+		@include desktop {
+			width: 600px;
+		}
+		@include laptop {
+			padding-top: 78px;
+			width: 510px;
+		}
 		@include tablets {
 			float: none;
+			width: 90%;
 			display: block;
 			margin: 75px auto 0;
 		}
@@ -281,26 +290,25 @@ p {
 			height: 203px;
 		}
 	}
-	& .footer__title, .footer__text {
+	& .footer__title {
 		@include phones {
 			font-size: 32px;
 		}
-	}
-	& .footer__brand {
-		@include phones {
-			width: 280px;
+		@include main(375px) {
+			font-size: 28px;
 		}
-		@include small_phones {
-			width: 95%;
-			margin: 0 auto;
+	}
+	& .footer__text {
+		@include phones {
+			font-size: 17px;
+		}
+		@include main(390px) {
+			font-size: 17px;
 		}
 	}
 	& .footer__price-new {
 		@include tablets {
-			right: 15%;
-		}
-		@include main(510px) {
-			right: 10%;
+			right: 0;
 		}
 		@include phones {
 			font-size: 30px;
@@ -313,10 +321,7 @@ p {
 	}
 	& .footer__price-old {
 		@include tablets {
-			left: 20%;
-		}
-		@include main(510px) {
-			left: 10%;
+			left: 15px;
 		}
 		@include phones {
 			font-size: 22px;
@@ -337,7 +342,7 @@ p {
 	}
 	& .footer__button-item {
 		@include phones {
-			font-size: 24px;
+			font-size: 22px;
 		}
 	}
 }
@@ -415,6 +420,7 @@ p {
 	float: right;
 	width: 45%;
 	font-size: 24px;
+	text-align: justify;
 	@include jenya(mabold);
 	@include desktop {
 		font-size: 23px;
@@ -983,6 +989,8 @@ p {
 	@include phones {
 		width: 280px;
 		margin-bottom: 5px;
+		flex-flow: column wrap;
+    display: flex;
 	}
 }
 
@@ -1007,7 +1015,8 @@ p {
 		margin-right: 15px;
 	}
 	@include phones {
-		display: none;
+		width: 285px;
+		height: 80px;
 	}
 }
 
@@ -1020,9 +1029,17 @@ p {
 	cursor: pointer;
 	&:first-child {
 		margin-top: 0;
+		@include phones {
+			margin-left: 0;
+		}
 	}
 	&:last-child {
-		margin-bottom: 0;
+		@include phones {
+			display: none;
+		}
+	}
+	& .man-margin {
+		margin-right: 0;
 	}
 	@include desktop {
 		width: 80px;
@@ -1039,38 +1056,19 @@ p {
 		height: 80px;
 		margin: 15px 0;
 	}
+	@include phones {
+		display: inline-block;
+		width: 62px;
+		height: 62px;
+		float: none;
+		margin: 15px 4.6px;
+	}
 }
 
 .gallery__man-dots_pic {
 	@include absolute-center;
 	max-width: 99.9%;
 	max-height: 99.9%;
-}
-
-// gallery dots on mobile
-.gallery__man-dots_mob {
-	display: none;
-	@include phones {
-		display: inline-block;
-		position: relative;
-		width: 102%;
-		height: 80px;
-
-	}
-	& .gallery__man-dots_item {
-		display: inline-block;
-		width: 62px;
-		height: 62px;
-		float: none;
-		margin: 15px 4.6px;
-		&:first-child {
-			margin-left: 0;
-		}
-		&:last-child {
-			margin-bottom: 15px;
-			margin-right: 0;
-		}
-	}
 }
 
 .gallery__man-show {
@@ -1094,6 +1092,7 @@ p {
 	@include phones {
 		max-width: 280px;
     height: 422px;
+    order: -1;
 	}
 }
 
@@ -1125,7 +1124,7 @@ p {
 .gallery__man-descr {
 	padding-left: 45px;
 	@include desktop {
-		padding-left: 25px;
+		padding-left: 0px;
 	}
 	@include laptop {
 		width: 525px;
@@ -1153,9 +1152,14 @@ p {
 		@include clearfix;
 		@include desktop {
 			height: 60px;
+			position: relative;
 		}
 		@include laptop {
 			height: auto;
+			margin-bottom: 50px;
+		}
+		@include phones {
+			margin-bottom: 0;
 		}
 	}
 	&:nth-child(1) {
@@ -1165,7 +1169,7 @@ p {
 				margin-right: 70px;
 			}
 			@include phones {
-				margin-right: 32px;
+				margin-right: 33px;
 			}
 		}
 	}
@@ -1176,7 +1180,7 @@ p {
 				margin-right: 160px;
 			}
 			@include phones {
-				margin-right: 32px;
+				margin-right: 112px;
 			}
 		}
 	}
@@ -1187,9 +1191,15 @@ p {
 				margin-right: 112px;
 			}
 			@include phones {
-				margin-right: 32px;
+				margin-right: 71px;
 			}
 		}
+	}
+}
+
+.descr__text-left {
+	@include phones {
+		margin-left: 140px;
 	}
 }
 
@@ -1212,15 +1222,23 @@ p {
 		cursor: pointer;
 	}
 	@include desktop {
-		margin-top: 12px;
+		position: absolute;
+		left: 71%;
+		top: 0;
 	}
 	@include laptop {
-		margin-top: 3px;
+		position: absolute;
+		top: auto;
+		left: 44%;
+		bottom: -26px;
 	}
 	@include tablets {
-		margin-top: 12px;
+		position: absolute;
+		left: 44%;
+		bottom: -26px;
 	}
 	@include phones {
+		position: static;
 		width: 114px;
 		float: right;
 	}
@@ -1230,18 +1248,22 @@ p {
 	width: 172px;
 	float: left;
 	@include desktop {
-		margin-top: 10px;
-		margin-left: -5px;
+		float: none;
+		display: inline-block;
+		position: absolute;
+		left: 30%;
+		top: 0;
 	}
 	@include laptop {
-		margin-top: 0;
-		margin-left: 0;
+		top: auto;
+		left: -5px;
+		bottom: -34px;
 	}
 	@include tablets {
-		margin-top: 9px;
-		margin-left: -5px;
+		bottom: -34px;
 	}
 	@include phones {
+		position: static;
 		width: 166px;
 		margin-left: -5px;
 	}
@@ -1409,6 +1431,8 @@ p {
 	@include phones {
 		width: 280px;
 		margin-bottom: 5px;
+		display: flex;
+		flex-flow: column wrap;
 	}
 }
 
@@ -1433,7 +1457,8 @@ p {
 		margin-right: 15px;
 	}
 	@include phones {
-		display: none;
+		width: 285px;
+		height: 80px;
 	}
 }
 
@@ -1446,9 +1471,18 @@ p {
 	cursor: pointer;
 	&:first-child {
 		margin-top: 0;
+		@include phones {
+			margin-left: 0;
+		}
 	}
 	&:last-child {
 		margin-bottom: 0;
+		@include phones {
+			display: none;
+		}
+	}
+	& .woman-margin {
+		margin-right: 0;
 	}
 	@include desktop {
 		width: 80px;
@@ -1465,37 +1499,19 @@ p {
 		height: 80px;
 		margin: 15px 0;
 	}
+	@include phones {
+		display: inline-block;
+		width: 62px;
+		height: 62px;
+		float: none;
+		margin: 15px 4.6px;
+	}
 }
 
 .gallery__woman-dots_pic {
 	@include absolute-center;
 	max-width: 99.9%;
 	max-height: 99.9%;
-}
-
-// gallery dots on mobile
-.gallery__woman-dots_mob {
-	display: none;
-	@include phones {
-		display: inline-block;
-		position: relative;
-		width: 102%;
-		height: 80px;
-	}
-	& .gallery__woman-dots_item {
-		display: inline-block;
-		width: 62px;
-		height: 62px;
-		float: none;
-		margin: 15px 4.6px;
-		&:first-child {
-			margin-left: 0;
-		}
-		&:last-child {
-			margin-bottom: 15px;
-			margin-right: 0;
-		}
-	}
 }
 
 .gallery__woman-show {
@@ -1519,6 +1535,7 @@ p {
 	@include phones {
 		max-width: 280px;
     height: 422px;
+    order: -1;
 	}
 }
 
@@ -1557,7 +1574,7 @@ p {
 .gallery__woman-descr {
 	padding-left: 45px;
 	@include desktop {
-		padding-left: 25px;
+		padding-left: 0px;
 	}
 	@include laptop {
 		width: 525px;
@@ -1586,13 +1603,7 @@ p {
 .gallery__br {
 	display: none;
 	@include desktop {
-		display:  block;
-	}
-	@include laptop {
-		display:  none;
-	}
-	@include tablets {
-		display:  block;
+		display: block;
 	}
 }
 
@@ -1628,13 +1639,17 @@ p {
 .footer__form-button {
 	@include gorizontal-gradient;
 	height: 55px;
-	width: 240px;
+	width: 250px;
 	border: 0 none;
-	font-size: 24px;
+	font-size: 22px;
 	@include jenya(mabold);
 	color: #fff;
 	text-transform: uppercase;
 	margin: 10px auto 0;
+	@include tablets {
+		width: 270px;
+		font-size: 22px;
+	}
 	@include phones {
 		height: 31px;
 		width: 203px;
@@ -2189,11 +2204,17 @@ p {
 
 .empty {
 	height: 855px;
+	@include desktop {
+		height: 830px;
+	}
+	@include laptop {
+		height: 730px;
+	}
 	@include tablets {
-		height: 900px;
+		height: 800px;
 	}
 	@include phones {
-		height: 700px;
+		height: 680px;
 	}
 }
 // section footer
@@ -2204,14 +2225,22 @@ p {
 	min-height: 855px;
 	font-size: 14px;
 	color: #101010;
+	@include desktop {
+		margin-top: -830px;
+		min-height: 830px;
+	}
+	@include laptop {
+		margin-top: -730px;
+		min-height: 730px;
+	}
 	@include tablets {
-		min-height: 900px;
-		margin-top: -900px;
+		min-height: 800px;
+		margin-top: -800px;
 		background: url('../img/back-footer.png') no-repeat 35% top/cover;
 	}
 	@include phones {
-		min-height: 700px;
-		margin-top: -700px;
+		min-height: 680px;
+		margin-top: -680px;
 		background: url('../img/back-footer.png') no-repeat 38% top/cover;
 	}
 }
@@ -2263,18 +2292,29 @@ p {
 	color: #fff;
 	text-align: center;
 	padding-top: 150px;
+	width: 700px;
 	@include desktop {
-		// margin-right: -20px;
+		width: 600px;
+	}
+	@include laptop {
+		padding-top: 170px;
+		width: 510px;
 	}
 	@include tablets {
+		width: 90%;
 		float: none;
 		display: block;
 		margin: 75px auto 0;
-		padding-top: 50px;
+		padding-top: 40px;
 	}
 	@include phones {
 		padding-top: 0;
-		margin-top: 45px;
+		margin-top: 70px;
+		margin-bottom: 30px;
+	}
+	@include main(375px) {
+		margin-top: 50px;
+    margin-bottom: 10px;
 	}
 }
 
@@ -2285,51 +2325,49 @@ p {
 		font-size: 62px;
 	}
 	@include laptop {
-		font-size: 46px;
+		font-size: 45px;
 	}
 	@include phones {
 		font-size: 32px;
+	}
+	@include main(375px) {
+		font-size: 28px;
 	}
 }
 
 .footer__text {
-	font-size: 48px;
-	@include jenya(lato);
-	@include phones {
-		font-size: 32px;
-	}
-}
-
-.footer__brand {
-	position: relative;
-	width: 588px;
-	height: 94px;
+	font-size: 32px;
+	width: 70%;
+	display: block;
 	margin: 0 auto;
+	@include jenya(lato);
 	@include desktop {
-		width: 500px;
-		height: 84px;
+		width: 82%;
 	}
 	@include laptop {
-		width: 400px;
+		font-size: 24px;
+		width: 75%;
+	}
+	@include tablets {
+		width: 378px;
 	}
 	@include phones {
-		width: 280px;
+		font-size: 17px;
+		width: 270px;
 	}
-	@include small_phones {
-		width: 95%;
-	}
-}
-
-.footer__brand-pic {
-	@include absolute-center;
-	max-width: 99.9%;
-	max-height: 99.9%;
 }
 
 .footer__price {
 	position: relative;
 	width: 100%;
 	height: 75px;
+	@include tablets {
+		width: 370px;
+		margin: 0 auto;
+	}
+	@include phones {
+		width: 100%;
+	}
 }
 
 .footer__price-old {
@@ -2341,13 +2379,10 @@ p {
 		left: 20%;
 	}
 	@include laptop {
-		left: 10%;
-	}
-	@include tablets {
 		left: 20%;
 	}
-	@include main(510px) {
-		left: 10%;
+	@include tablets {
+		left: 15px;
 	}
 	@include phones {
 		font-size: 22px;
@@ -2383,13 +2418,10 @@ p {
 		right: 15%;
 	}
 	@include laptop {
-		right: 5%;
-	}
-	@include tablets {
 		right: 15%;
 	}
-	@include main(510px) {
-		right: 10%;
+	@include tablets {
+		right: 0;
 	}
 	@include phones {
 		font-size: 30px;
@@ -2412,17 +2444,18 @@ p {
 	}
 	@include tablets {
 		margin-top: 40px;
+		width: 360px;
 	}
 	@include phones {
 		margin-top: 0;
-		width: 236px;
+		width: 240px;
 		height: 40px;
 	}
 }
 
 .footer__button-item {
 	@include jenya(mabold);
-	font-size: 35px;
+	font-size: 33px;
 	background: transparent;
 	border: 2px solid #fff;
 	cursor: pointer;
@@ -2432,8 +2465,11 @@ p {
 	@include laptop {
 		font-size: 28px;
 	}
-	@include phones {
+	@include tablets {
 		font-size: 24px;
+	}
+	@include phones {
+		font-size: 22px;
 	}
 }
 
@@ -2769,7 +2805,7 @@ xpopup
 xpopup 
 
 -------------------------------- */
-.cd-politics {
+.cd-politics, .cd-man, .cd-woman {
   position: fixed;
   left: 0;
   top: 0;
@@ -2803,13 +2839,24 @@ xpopup
   	}
   }
 }
-.cd-politics.is-visible {
+.cd-politics.is-visible, .cd-man.is-visible, .cd-woman.is-visible {
 	z-index: 5;
   opacity: 1;
   visibility: visible;
   -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
   -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
   transition: opacity 0.3s 0s, visibility 0s 0s;
+}
+
+.cd-woman {
+	.table__size {
+		@include main(415px) {
+			font-size: 12px;
+		}
+		@include main(360px) {
+			font-size: 10px;
+		}
+	}
 }
 
 .form-popup_politic {
@@ -2909,72 +2956,67 @@ xpopup
 
 // ANIMATION
 
-@-webkit-keyframes hvr-wobble-to-top-right {
-  16.65% {
-    -webkit-transform: translate(8px, -8px);
-    transform: translate(8px, -8px);
+/* Bob */
+@-webkit-keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
   }
-  33.3% {
-    -webkit-transform: translate(-6px, 6px);
-    transform: translate(-6px, 6px);
-  }
-  49.95% {
-    -webkit-transform: translate(4px, -4px);
-    transform: translate(4px, -4px);
-  }
-  66.6% {
-    -webkit-transform: translate(-2px, 2px);
-    transform: translate(-2px, 2px);
-  }
-  83.25% {
-    -webkit-transform: translate(1px, -1px);
-    transform: translate(1px, -1px);
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
   }
   100% {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
   }
 }
-@keyframes hvr-wobble-to-top-right {
-  16.65% {
-    -webkit-transform: translate(8px, -8px);
-    transform: translate(8px, -8px);
+@keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
   }
-  33.3% {
-    -webkit-transform: translate(-6px, 6px);
-    transform: translate(-6px, 6px);
-  }
-  49.95% {
-    -webkit-transform: translate(4px, -4px);
-    transform: translate(4px, -4px);
-  }
-  66.6% {
-    -webkit-transform: translate(-2px, 2px);
-    transform: translate(-2px, 2px);
-  }
-  83.25% {
-    -webkit-transform: translate(1px, -1px);
-    transform: translate(1px, -1px);
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
   }
   100% {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
   }
 }
-.hvr-wobble-to-top-right {
+@-webkit-keyframes hvr-bob-float {
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+@keyframes hvr-bob-float {
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+.hvr-bob {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px transparent;
 }
-.hvr-wobble-to-top-right:hover, .hvr-wobble-to-top-right:focus, .hvr-wobble-to-top-right:active {
-  -webkit-animation-name: hvr-wobble-to-top-right;
-  animation-name: hvr-wobble-to-top-right;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
+.hvr-bob:hover, .hvr-bob:focus, .hvr-bob:active {
+  -webkit-animation-name: hvr-bob-float, hvr-bob;
+  animation-name: hvr-bob-float, hvr-bob;
+  -webkit-animation-duration: .3s, 1.5s;
+  animation-duration: .3s, 1.5s;
+  -webkit-animation-delay: 0s, .3s;
+  animation-delay: 0s, .3s;
+  -webkit-animation-timing-function: ease-out, ease-in-out;
+  animation-timing-function: ease-out, ease-in-out;
+  -webkit-animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate;
 }

@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="public/css/normalize.css">
 	<link rel="stylesheet" href="public/css/fonts.css">
 	<link rel="stylesheet" href="public/css/bootstrap.min.css">
+	<link rel="stylesheet" href="public/css/animate.css">
 	<link rel="stylesheet" href="public/css/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="public/css/owl.carousel.min.css">
 	<link rel="stylesheet" href="public/css/owl.theme.default.min.css">
@@ -32,9 +33,8 @@
 							</div>
 							<ul class="footer__descr">
 								<li class="footer__title">Умное термобельё</li>
-								<li class="footer__text">с технологией</li>
-								<li class="footer__brand">
-									<img src="public/img/cold-head.png" alt="" class="footer__brand-pic">
+								<li class="footer__text">
+									не дает влаге проникнуть к телу и надежно защищает от холода
 								</li>
 								<li class="footer__price">
 									<span class="footer__price-old">
@@ -50,7 +50,7 @@
 					</div>
 				</div>
 				<div class="footer__button " data-form="buy">
-					<button class="footer__button-item hvr-wobble-to-top-right">Заказать по скидке</button>
+					<div class="footer__button-item hvr-bob">Заказать по скидке</div>
 				</div>
 			</header>
 			<!-- Site about -->
@@ -181,7 +181,7 @@
 			<section class="gallery">
 				<div class="container">
 					<div class="row">
-						<h3 class="gallery__title" data-section="buy">Умное термобельё Under Armour</h3>
+						<h3 class="gallery__title">Умное термобельё Under Armour</h3>
 						<aside class="gallery__man">
 							<div class="gallery__man-preview">
 								<ul class="gallery__man-dots">
@@ -194,7 +194,7 @@
 									<li class="gallery__man-dots_item">
 										<div style="background: url('public/img/man/03.jpg') no-repeat center top/cover" alt="" class="gallery__man-dots_pic"></div>
 									</li>
-									<li class="gallery__man-dots_item">
+									<li class="gallery__man-dots_item man-margin">
 										<div style="background: url('public/img/man/04.jpg') no-repeat center top/cover" alt="" class="gallery__man-dots_pic"></div>
 									</li>
 									<li class="gallery__man-dots_item">
@@ -218,22 +218,8 @@
 										<img src="public/img/man/05.jpg" alt="" class="gallery__man-show_pic">
 									</a>
 								</div>
-								<ul class="gallery__man-dots_mob">
-									<li class="gallery__man-dots_item">
-										<div style="background: url('public/img/man/01.jpg') no-repeat center top/cover" alt="" class="gallery__man-dots_pic"></div>
-									</li>
-									<li class="gallery__man-dots_item">
-										<div style="background: url('public/img/man/02.jpg') no-repeat center top/cover" alt="" class="gallery__man-dots_pic"></div>
-									</li>
-									<li class="gallery__man-dots_item">
-										<div style="background: url('public/img/man/03.jpg') no-repeat center top/cover" alt="" class="gallery__man-dots_pic"></div>
-									</li>
-									<li class="gallery__man-dots_item">
-										<div style="background: url('public/img/man/04.jpg') no-repeat center top/cover" alt="" class="gallery__man-dots_pic"></div>
-									</li>
-								</ul>
 							</div>
-							<ul class="gallery__man-descr">
+							<ul class="gallery__man-descr" data-section="buy">
 								<li class="gallery__man-descr_item">
 									<span class="gallery__man-descr_bold">
 										Производитель:
@@ -250,7 +236,7 @@
 									<span class="gallery__man-descr_bold">
 										Материал:
 									</span>
-									вискоза 72% , спандекс 28%
+									вискоза 72% , <span class="descr__text-left">спандекс 28%</span>
 								</li>
 								<li class="gallery__man-descr_item">
 									<span class="gallery__man-descr_bold gallery__man-descr_bold-size">
@@ -261,7 +247,7 @@
 										<input type="checkbox" id="checkbox-1-1" class="regular-checkbox" /><label for="checkbox-1-1" data-check="first" class="first check__size"><span class="check__size-mark">S</span></label><input type="checkbox" id="checkbox-1-2" class="regular-checkbox" /><label for="checkbox-1-2" data-check="second" class="second check__size"><span class="check__size-mark mark-center">M</span></label><input type="checkbox" id="checkbox-1-3" class="regular-checkbox" /><label for="checkbox-1-3" data-check="third" class="third check__size"><span class="check__size-mark">L</span></label>
 										<input type="checkbox" id="checkbox-1-4" class="regular-checkbox" /><label for="checkbox-1-4" data-check="fourth" class="fourth check__size"><span class="check__size-mark mark-center">XL</span></label>
 									</div>
-									<p class="gallery__man-descr_size cd-popup-trigger">Таблица размеров</p>
+									<p class="gallery__man-descr_size man-size">Таблица размеров</p>
 								</li>
 							</ul>
 							<div class="gallery__man-form">
@@ -301,7 +287,7 @@
 									<li class="gallery__woman-dots_item">
 										<div style="background: url('public/img/woman/03.jpg') no-repeat center top/cover" alt="" class="gallery__woman-dots_pic"></div>
 									</li>
-									<li class="gallery__woman-dots_item">
+									<li class="gallery__woman-dots_item woman-margin">
 										<div style="background: url('public/img/woman/04.jpg') no-repeat center top/cover" alt="" class="gallery__woman-dots_pic"></div>
 									</li>
 									<li class="gallery__woman-dots_item">
@@ -325,20 +311,6 @@
 										<img src="public/img/woman/05.jpg" alt="" class="gallery__woman-show_pic">
 									</a>
 								</div>
-								<ul class="gallery__woman-dots_mob">
-									<li class="gallery__woman-dots_item">
-										<div style="background: url('public/img/woman/01.jpg') no-repeat center top/cover" alt="" class="gallery__woman-dots_pic"></div>
-									</li>
-									<li class="gallery__woman-dots_item">
-										<div style="background: url('public/img/woman/02.jpg') no-repeat center top/cover" alt="" class="gallery__woman-dots_pic"></div>
-									</li>
-									<li class="gallery__woman-dots_item">
-										<div style="background: url('public/img/woman/03.jpg') no-repeat center top/cover" alt="" class="gallery__woman-dots_pic"></div>
-									</li>
-									<li class="gallery__woman-dots_item">
-										<div style="background: url('public/img/woman/04.jpg') no-repeat center top/cover" alt="" class="gallery__woman-dots_pic"></div>
-									</li>
-								</ul>
 							</div>
 							<ul class="gallery__woman-descr">
 								<li class="gallery__man-descr_item">
@@ -357,7 +329,7 @@
 									<span class="gallery__man-descr_bold">
 										Материал:
 									</span>
-									вискоза 72% , спандекс 28%
+									вискоза 72% , <span class="descr__text-left">спандекс 28%</span>
 								</li>
 								<li class="gallery__man-descr_item">
 									<span class="gallery__man-descr_bold gallery__man-descr_bold-size">
@@ -368,7 +340,7 @@
 										<input type="checkbox" id="checkbox-2-1" class="regular-checkbox" /><label for="checkbox-2-1" data-check="first" class="first check__size"><span class="check__size-mark">S</span></label><input type="checkbox" id="checkbox-2-2" class="regular-checkbox" /><label for="checkbox-2-2" data-check="second" class="second check__size"><span class="check__size-mark mark-center">M</span></label><input type="checkbox" id="checkbox-2-3" class="regular-checkbox" /><label for="checkbox-2-3" data-check="third" class="third check__size"><span class="check__size-mark">L</span></label>
 										<input type="checkbox" id="checkbox-2-4" class="regular-checkbox" /><label for="checkbox-2-4" data-check="fourth" class="fourth check__size"><span class="check__size-mark mark-center">XL</span></label>
 									</div>
-									<p class="gallery__man-descr_size cd-popup-trigger">Таблица размеров</p>
+									<p class="gallery__man-descr_size woman-size">Таблица размеров</p>
 								</li>
 							</ul>
 							<div class="gallery__man-form">
@@ -515,9 +487,8 @@
 							</div>
 							<ul class="footer__descr">
 								<li class="footer__title">Умное термобельё</li>
-								<li class="footer__text">с технологией</li>
-								<li class="footer__brand">
-									<img src="public/img/cold-head.png" alt="" class="footer__brand-pic">
+								<li class="footer__text">
+									не дает влаге проникнуть к телу и надежно защищает от холода
 								</li>
 								<li class="footer__price">
 									<span class="footer__price-old">
@@ -533,7 +504,7 @@
 					</div>
 				</div>
 			<div class="footer__button" data-form="buy">
-				<button class="footer__button-item hvr-wobble-to-top-right">Заказать по скидке</button>
+				<div class="footer__button-item hvr-bob">Заказать по скидке</div>
 			</div>
 			<div class="footer__bottom">
 				<div class="container">
@@ -545,8 +516,8 @@
 			</div>
 		</footer>
 
-<!-- popup -->
-		<div class="cd-popup" role="alert">
+<!-- popup men-size -->
+		<div class="cd-man" role="alert">
 			<div class="cd-popup-container table__size-wrap">
 				<div class="table__size">
 					<h4 class="table__size-title">
@@ -591,6 +562,57 @@
 				  		</tr>
 				  	</tbody>
 				  </table> 
+				<a href="#0" class="cd-popup-close img-replace">Close</a>
+				</div>
+			</div> <!-- cd-popup-container -->
+		</div> <!-- cd-popup -->
+
+<!-- popup woman-size -->
+		<div class="cd-woman" role="alert">
+			<div class="cd-popup-container table__size-wrap">
+				<div class="table__size">
+					<h4 class="table__size-title">
+						Выберите размер
+					</h4>
+					<table class="table text-center">
+          	<tbody>
+              <tr>
+          			<td>Женские размеры</td>
+          			<td>S</td>
+          			<td>M</td>
+          			<td>L</td>
+          			<td>XL</td>
+          		</tr>
+          		<tr>
+          			<td>Обхват груди</td>
+          			<td>82/85</td>
+          			<td>90/93</td>
+          			<td>94/97</td>
+          			<td>98/102</td>
+          		</tr>
+          		<tr>
+          			<td>Обхват талии</td>
+          			<td>66/69</td>
+          			<td>70/74</td>
+          			<td>74/76</td>
+          			<td>80/84</td>
+          		</tr>
+          		<tr>
+          			<td>Обхват бедер</td>
+          			<td>92/95</td>
+          			<td>96/100</td>
+          			<td>102/104</td>
+          			<td>105/108</td>
+          		</tr>
+          		<tr>
+          			<td>Обхват штанины</td>
+          			<td>89</td>
+          			<td>90</td>
+          			<td>91</td>
+          			<td>92</td>
+          		</tr>
+          	</tbody>
+          </table>
 				<a href="#0" class="cd-popup-close img-replace">Close</a>
 				</div>
 			</div> <!-- cd-popup-container -->

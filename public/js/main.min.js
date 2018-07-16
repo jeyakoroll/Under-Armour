@@ -4,6 +4,8 @@ $(document).ready(function(){
 
 	// about gallery
 	woman.owlCarousel({
+		animateOut: 'slideOutDown',
+    animateIn: 'flipInX',
     responsiveClass:true,
     responsive:{
         0:{
@@ -14,17 +16,7 @@ $(document).ready(function(){
 				    dots: true,
 				    nav: false,
 				    autoWidth: true,
-				    dotsContainer: '.gallery__woman-dots_mob'
-        },
-        480:{
-        		loop:true,
-				    margin: 250,
-				    items: 1,
-				    center: true,
-				    dots: true,
-				    nav: false,
-				    autoWidth: true,
-						dotsContainer: '.gallery__woman-dots'
+				    dotsContainer: '.gallery__woman-dots'
         },
         992:{
             loop:true,
@@ -41,6 +33,8 @@ $(document).ready(function(){
 
   // about gallery
 	man.owlCarousel({
+		animateOut: 'slideOutDown',
+    animateIn: 'flipInX',
     responsiveClass:true,
     responsive:{
         0:{
@@ -51,17 +45,7 @@ $(document).ready(function(){
 				    dots: true,
 				    nav: false,
 				    autoWidth: true,
-				    dotsContainer: '.gallery__man-dots_mob'
-        },
-        480:{
-        		loop:true,
-				    margin: 250,
-				    items: 1,
-				    center: true,
-				    dots: true,
-				    nav: false,
-				    autoWidth: true,
-						dotsContainer: '.gallery__man-dots'
+				    dotsContainer: '.gallery__man-dots'
         },
         992:{
             loop:true,
@@ -101,16 +85,15 @@ $(document).ready(function(){
 
       });
 
- 	// // popup
-	// //open popup
-	$('.cd-popup-trigger').on('click', function(event){
+ 	// // popup man-size
+	$('.man-size').on('click', function(event){
 		event.preventDefault();
-		$('.cd-popup').addClass('is-visible');
+		$('.cd-man').addClass('is-visible');
 	});
 	
 	//close popup
-	$('.cd-popup').on('click', function(event){
-		if( $(event.target).is('.cd-popup-close') || $(event.target).is('.cd-popup') ) {
+	$('.cd-man').on('click', function(event){
+		if( $(event.target).is('.cd-popup-close') || $(event.target).is('.cd-man') ) {
 			event.preventDefault();
 			$(this).removeClass('is-visible');
 		}
@@ -118,12 +101,31 @@ $(document).ready(function(){
 	//close popup when clicking the esc keyboard button
 	$(document).keyup(function(event){
     	if(event.which=='27'){
-    		$('.cd-popup').removeClass('is-visible');
+    		$('.cd-man').removeClass('is-visible');
+	    }
+   });
+
+	// // popup woman-size
+	$('.woman-size').on('click', function(event){
+		event.preventDefault();
+		$('.cd-woman').addClass('is-visible');
+	});
+	
+	//close popup
+	$('.cd-woman').on('click', function(event){
+		if( $(event.target).is('.cd-popup-close') || $(event.target).is('.cd-woman') ) {
+			event.preventDefault();
+			$(this).removeClass('is-visible');
+		}
+	});
+	//close popup when clicking the esc keyboard button
+	$(document).keyup(function(event){
+    	if(event.which=='27'){
+    		$('.cd-woman').removeClass('is-visible');
 	    }
    });
 
 	// popup politics
-	// open popup
 	$('.politics').on('click', function(event){
 		event.preventDefault();
 		$('.cd-politics').addClass('is-visible');
@@ -154,7 +156,7 @@ $(document).ready(function(){
 
   function toForm(section, isAnimate) {
       var 
-          reqSection = $('.gallery__title').filter('[data-section="' + section +'"]'),
+          reqSection = $('.gallery__man-descr').filter('[data-section="' + section +'"]'),
           reqSectionPos = reqSection.offset().top;
 
       if (isAnimate) {
